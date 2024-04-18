@@ -1,6 +1,8 @@
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { DM_Sans } from "next/font/google"
 import Image from "next/image"
+import Link from "next/link"
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
@@ -34,6 +36,9 @@ function AboutPage() {
                             <div className="flex flex-col items-center gap-5">
                                 <h3 className="text-2xl">Angela Estevez</h3>
                                 <p className={cn(dmSans.className, "text-muted-foreground")}>Abogada Penalista</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary">
+                                    <Link href="/about/angela">ver más</Link>
+                                </Button>
                             </div>
                         </article>
                         <article className="flex flex-col items-center gap-12">
@@ -43,6 +48,9 @@ function AboutPage() {
                             <div className="flex flex-col items-center gap-5">
                                 <h3 className="text-2xl">Andrea Landriel</h3>
                                 <p className={cn(dmSans.className, "text-muted-foreground")}>Abogada Civil</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary">
+                                    <Link href="/about/andrea">ver más</Link>
+                                </Button>
                             </div>
                         </article>
                         <article className="flex flex-col items-center gap-12">
@@ -52,12 +60,15 @@ function AboutPage() {
                             <div className="flex flex-col items-center gap-5">
                                 <h3 className="text-2xl">Daniel Ramirez</h3>
                                 <p className={cn(dmSans.className, "text-muted-foreground")}>Abogado Comercial</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary">
+                                    <Link href="/about/daniel">ver más</Link>
+                                </Button>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <section className="flex flex-col md:flex-row gap-10">
+                <section className="flex flex-col md:flex-row gap-10 justify-center">
                     <div className="flex max-w-[660px] gap-10">
                         <div className="h-[1px] w-full max-w-[130px] bg-primary hidden md:block relative top-6"></div>
                         <div className="flex flex-col gap-4">
