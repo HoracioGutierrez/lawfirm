@@ -3,6 +3,7 @@ import { DM_Serif_Display } from "next/font/google";
 import Header from "../components/Header";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={cn(dmSerifDisplay.className,"bg-[#E8E9E1]")}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
