@@ -6,12 +6,19 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer"
 import { Button } from "./ui/button"
+import { useMemo } from "react"
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
 function Header() {
 
     const path = usePathname()
+
+    const title = useMemo(() => {
+        if (path === "/about") return "Sobre Nosotros"
+        if (path === "/contact") return "Contacto"
+        if (path === "/services") return "Servicios"
+    }, [path])
 
     return (
         <header className={cn("p-6 md:p-10 lg:p-14 xl:p-20", path != "/" && "bg-primary text-white")}>
@@ -28,6 +35,7 @@ function Header() {
                     <Link href="/services" className="text-xs md:text-sm lg:text-base xl:text-lg">Servicios</Link>
                     <Link href="/contact" className="text-xs md:text-sm lg:text-base xl:text-lg">Contacto</Link>
                 </nav>
+
                 <Drawer>
                     <DrawerTrigger className="sm:hidden" asChild>
                         <Menu />
@@ -60,6 +68,13 @@ function Header() {
                     </DrawerContent >
                 </Drawer >
             </div >
+            {path != "/" && (
+                <div className="py-10 md:py-14 xl:py-16 flex flex-col gap-4 md:flex-row max-w-[1600px] mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-8xl w-full ">{title}</h2>
+                    <div className="bg-white w-[2px]"></div>
+                    <p className={cn(dmSans.className, "text-lg text-muted-foreground")}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida </p>
+                </div>
+            )}
         </header >
     )
 }

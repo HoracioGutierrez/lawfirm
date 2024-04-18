@@ -17,8 +17,8 @@ function Footer() {
                     Estevez & Landriel
                 </h2>
             </div>
-            <Separator className="block w-full md:w-2/3 mx-auto my-12" />
-            <div className="text-white flex flex-col md:flex-row items-center justify-between gap-12">
+            <Separator className="block w-full md:w-2/3 mx-auto my-12 max-w-[1600px]" />
+            <div className="text-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-[1600px] mx-auto">
                 <div className="w-full md:w-1/5 flex flex-col gap-5">
                     <h3 className="text-2xl">Sobre Nosotros</h3>
                     <p className={cn(dmSans.className)}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.</p>
@@ -55,8 +55,8 @@ function Footer() {
                     </nav>
                 </div>
             </div>
-            <Separator className="block my-12" />
-            <p className={cn(dmSans.className, "text-white text-center text-sm md:text-lg text-muted-foreground")}>Copyright &copy; 2024 - Horacio Gutierrez Todos los derechos reservados</p>
+            <Separator className="block my-12 max-w-[1600px] mx-auto" />
+            <p className={cn(dmSans.className, "text-white text-center text-sm md:text-lg text-muted-foreground ")}>Copyright &copy; 2024 - Horacio Gutierrez Todos los derechos reservados</p>
         </footer>
     )
 }
