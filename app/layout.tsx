@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn(dmSerifDisplay.className)}>
+      <body className={cn(dmSerifDisplay.className,"bg-[#E8E9E1]")}>
         <Header/>
         {children}
       </body>
