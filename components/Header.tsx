@@ -18,12 +18,18 @@ function Header() {
         if (path === "/about") return "Sobre Nosotros"
         if (path === "/contact") return "Contacto"
         if (path === "/services") return "Servicios"
+        if (path === "/about/angela") return "Angela Estevez"
+        if (path === "/about/andrea") return "Andrea Landriel"
+        if (path === "/about/daniel") return "Daniel Ramirez"
     }, [path])
 
     const description = useMemo(() => {
         if (path === "/about") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
         if (path === "/contact") return "Comuníquese con nosotros hoy mismo para programar una consulta gratuita y discutir cómo podemos ayudarlo a lograr sus objetivos legales."
         if (path === "/services") return "Explore la amplia gama de servicios legales que ofrecemos para satisfacer sus necesidades individuales y comerciales."
+        if (path === "/about/angela") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
+        if (path === "/about/andrea") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
+        if (path === "/about/daniel") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
     }, [path])
 
     return (
