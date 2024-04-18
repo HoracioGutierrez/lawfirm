@@ -41,8 +41,8 @@ export default function Home() {
         <div className="w-full h-[2px] lg:w-[2px] bg-primary block lg:hidden mt-4"></div>
 
         <div className={cn("mt-12 lg:mt-24 max-w-8xl mx-auto text-center text-lg flex flex-col items-center gap-8")}>
-          <p className={cn(dmSans.className, "text-balance")}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque.</p>
-          <p className={cn(dmSans.className, "text-balance hidden md:block")}>Cum mattis mollis odio gravida adipiscing. Facilisis scelerisque non lacinia tincidunt faucibus tortor vel. Erat risus etiam quam pretium ornare. Semper orci arcu pulvinar adipiscing pretium. Erat facilisis dis arcu senectus sit mi fermentum eu aliquam. Felis neque posuere pharetra porttitor lacinia proin pretium. Et et pharetra tincidunt vel egestas risus sed mollis adipiscing. Lobortis risus mauris vitae pellentesque.</p>
+          <p className={cn(dmSans.className, "text-balance")}>En <span className="font-bold">Estevez & Landriel</span>, entendemos el estrés y la preocupación que pueden generar los problemas legales. Nuestro equipo de abogados experimentados está dedicado a brindarle la orientación y el apoyo que necesita para navegar situaciones complejas.</p>
+          <p className={cn(dmSans.className, "text-balance hidden md:block")}>Nos esforzamos por comprender su situación específica y buscar soluciones efectivas que se adapten a sus necesidades. Trabajaremos arduamente para proteger sus derechos e intereses, ayudándole a superar la incertidumbre y obtener el resultado deseado.</p>
           <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary">
             <Link href="/about">Conocenos</Link>
           </Button>

@@ -20,6 +20,12 @@ function Header() {
         if (path === "/services") return "Servicios"
     }, [path])
 
+    const description = useMemo(() => {
+        if (path === "/about") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
+        if (path === "/contact") return "Comuníquese con nosotros hoy mismo para programar una consulta gratuita y discutir cómo podemos ayudarlo a lograr sus objetivos legales."
+        if (path === "/services") return "Explore la amplia gama de servicios legales que ofrecemos para satisfacer sus necesidades individuales y comerciales."
+    }, [path])
+
     return (
         <header className={cn("p-6 md:p-10 lg:p-14 xl:p-20", path != "/" && "bg-primary text-white")}>
             <div className="max-w-[1600px] mx-auto flex items-center justify-between">
@@ -72,7 +78,7 @@ function Header() {
                 <div className="py-10 md:py-14 xl:py-16 flex flex-col gap-4 md:flex-row max-w-[1600px] mx-auto">
                     <h2 className="text-3xl md:text-4xl lg:text-8xl w-full ">{title}</h2>
                     <div className="bg-white w-[2px]"></div>
-                    <p className={cn(dmSans.className, "text-lg text-muted-foreground")}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida </p>
+                    <p className={cn(dmSans.className, "text-lg text-muted-foreground")}>{description}</p>
                 </div>
             )}
         </header >

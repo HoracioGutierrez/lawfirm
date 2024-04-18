@@ -21,7 +21,7 @@ function Footer() {
             <div className="text-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-[1600px] mx-auto">
                 <div className="w-full md:w-1/5 flex flex-col gap-5">
                     <h3 className="text-2xl">Sobre Nosotros</h3>
-                    <p className={cn(dmSans.className)}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.</p>
+                    <p className={cn(dmSans.className)}>Conocemos más sobre nuestro estudio a traves de nuestras redes en</p>
                     <nav className="flex gap-4">
                         <FacebookIcon />
                         <LinkedinIcon />
@@ -49,9 +49,9 @@ function Footer() {
                 <div className="w-full md:w-1/5 flex flex-col gap-5">
                     <h3 className="text-2xl">Contactenos</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <p className="flex gap-2 items-center"><Phone />+51 999 999 999</p>
-                        <p className="flex gap-2 items-center"><MailIcon /> 9bHk7@example.com</p>
-                        <p className="flex gap-2 items-center"><PinIcon /> Calle 123, Lima, Peru.</p>
+                        <p className="flex gap-2 items-center"><Phone />+54 11 3633 2324</p>
+                        <p className="flex gap-2 items-center"><MailIcon /> angelaeestevez@yahoo.com.ar</p>
+                        <p className="flex gap-2 items-center"><PinIcon /> 12 de Octubre 767 - Quilmes, Buenos Aires, Argentina.</p>
                     </nav>
                 </div>
             </div>
