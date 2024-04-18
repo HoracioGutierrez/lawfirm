@@ -23,27 +23,27 @@ function Footer() {
                     <h3 className="text-2xl">Sobre Nosotros</h3>
                     <p className={cn(dmSans.className)}>Conocemos más sobre nuestro estudio a traves de nuestras redes en</p>
                     <nav className="flex gap-4">
-                        <FacebookIcon />
-                        <LinkedinIcon />
-                        <TwitterIcon />
-                        <InstagramIcon />
+                        <FacebookIcon className="hover:text-secondary transition-colors duration-300"/>
+                        <LinkedinIcon className="hover:text-secondary transition-colors duration-300"/>
+                        <TwitterIcon className="hover:text-secondary transition-colors duration-300"/>
+                        <InstagramIcon className="hover:text-secondary transition-colors duration-300"/>
                     </nav>
                 </div>
                 <div className="hidden md:w-1/5 md:flex flex-col gap-5">
                     <h3 className="text-2xl">Servicios</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <Link href="#">Penal</Link>
-                        <Link href="#">Comercial</Link>
-                        <Link href="#">Civil</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Penal</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Comercial</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Civil</Link>
                     </nav>
                 </div>
                 <Separator className="block mx-auto md:hidden" />
                 <div className="hidden md:w-1/5 md:flex flex-col gap-5">
                     <h3 className="text-2xl">Links</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <Link href="#">Politica de privacidad</Link>
-                        <Link href="#">Terminos y Condiciones</Link>
-                        <Link href="#">Preguntas Frecuentes</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Politica de privacidad</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Terminos y Condiciones</Link>
+                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Preguntas Frecuentes</Link>
                     </nav>
                 </div>
                 <div className="w-full md:w-1/5 flex flex-col gap-5">

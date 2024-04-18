@@ -42,10 +42,10 @@ function Header() {
                     Estevez & Landriel
                 </h1>
                 <nav className={cn(dmSans.className, "hidden sm:flex sm:gap-12")}>
-                    <Link href="/" className="text-xs md:text-sm lg:text-base xl:text-lg">Inicio</Link>
-                    <Link href="/about" className="text-xs md:text-sm lg:text-base xl:text-lg">Quienes somos</Link>
-                    <Link href="/services" className="text-xs md:text-sm lg:text-base xl:text-lg">Servicios</Link>
-                    <Link href="/contact" className="text-xs md:text-sm lg:text-base xl:text-lg">Contacto</Link>
+                    <Link href="/" className="text-xs md:text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors duration-300">Inicio</Link>
+                    <Link href="/about" className="text-xs md:text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors duration-300">Quienes somos</Link>
+                    <Link href="/services" className="text-xs md:text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors duration-300">Servicios</Link>
+                    <Link href="/contact" className="text-xs md:text-sm lg:text-base xl:text-lg hover:text-secondary transition-colors duration-300">Contacto</Link>
                 </nav>
 
                 <Drawer>
