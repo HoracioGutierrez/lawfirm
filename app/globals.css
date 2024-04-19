@@ -79,3 +79,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.rotate-arrow {
+  transform: rotateX(180deg);
+}
