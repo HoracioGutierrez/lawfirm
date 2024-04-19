@@ -1,9 +1,9 @@
-import Construction from "@/components/Construction"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { DM_Sans } from "next/font/google"
 import Image from "next/image"
+import Link from "next/link"
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
@@ -22,32 +22,44 @@ function ServicesPage() {
                             <AccordionTrigger className="border-b border-primary">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl">Derecho Penales</h3>
                             </AccordionTrigger>
-                            <AccordionContent>
+                            <AccordionContent className="space-y-4">
                                 <p className={cn(dmSans.className, "text-base lg:text-lg")}>Defensa integral en procesos penales: Enfrentamos cargos penales con estrategias sólidas y un enfoque compasivo, protegiendo sus derechos y luchando por el mejor resultado posible.</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary self-start">
+                                    <Link href='/services/penal'>Leer Más</Link>
+                                </Button>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="border-b border-primary">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl">Derecho Laboral</h3>
                             </AccordionTrigger>
-                            <AccordionContent>
+                            <AccordionContent className="space-y-4">
                                 <p className={cn(dmSans.className, "text-base lg:text-lg")}>Su aliado en el ámbito laboral: Le brindamos asesoría y representación experta en asuntos laborales, desde contratos y negociaciones hasta reclamos por despido y defensa de sus derechos como trabajador.</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary self-start">
+                                    <Link href='/services/laboral'>Leer Más</Link>
+                                </Button>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger className="border-b border-primary">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl">Derecho Civil</h3>
                             </AccordionTrigger>
-                            <AccordionContent>
+                            <AccordionContent className="space-y-4">
                                 <p className={cn(dmSans.className, "text-base lg:text-lg")}>Resolviendo conflictos civiles con eficiencia: Navegamos por la complejidad de los casos civiles, representándolo en disputas familiares, inmobiliarias, contractuales y otras áreas del derecho civil.</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary self-start">
+                                    <Link href='/services/civil'>Leer Más</Link>
+                                </Button>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
                             <AccordionTrigger className="border-b border-primary">
                                 <h3 className="text-xl md:text-2xl xl:text-3xl">Derecho Comercial</h3>
                             </AccordionTrigger>
-                            <AccordionContent>
+                            <AccordionContent className="space-y-4">
                                 <p className={cn(dmSans.className, "text-base lg:text-lg")}>Asesoría legal para el éxito empresarial: Le guiamos en la toma de decisiones estratégicas, la redacción de contratos, la protección de la propiedad intelectual y la resolución de conflictos comerciales.</p>
+                                <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary self-start">
+                                    <Link href='/services/comercial'>Leer Más</Link>
+                                </Button>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
@@ -57,7 +69,7 @@ function ServicesPage() {
                     <p className={cn(dmSans.className, "text-base lg:text-lg")}>Cum mattis mollis odio gravida adipiscing. Facilisis scelerisque non lacinia tincidunt faucibus tortor vel. Erat risus etiam quam pretium ornare. Semper orci arcu pulvinar adipiscing pretium. Erat facilisis dis arcu senectus sit mi fermentum eu aliquam. Felis neque posuere pharetra porttitor lacinia proin pretium. Et et pharetra tincidunt vel egestas risus sed mollis adipiscing. Lobortis risus mauris vitae pellentesque lobortis sapien. Mi convallis leo nisl pharetra quam arcu blandit. Metus nisl volutpat ut sed sit sit est. </p>
                     <p className="text-7xl my-16">$10.000,00 / consulta</p>
                     <Button className="text-2xl rounded-none py-3 px-16 hover:bg-secondary self-start">
-                        Hacer Reserva
+                        <Link href='#'>Hacer Reserva</Link>
                     </Button>
                 </section>
                 <section className="py-10 xl:py-20">
