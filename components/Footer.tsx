@@ -41,8 +41,8 @@ function Footer() {
                 <div className="hidden md:w-1/5 md:flex flex-col gap-5">
                     <h3 className="text-2xl">Links</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Politica de privacidad</Link>
-                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Terminos y Condiciones</Link>
+                        <Link href="/policies" className="hover:text-secondary transition-colors duration-300">Politica de privacidad</Link>
+                        <Link href="/terms" className="hover:text-secondary transition-colors duration-300">Terminos y Condiciones</Link>
                         <Link href="/faq" className="hover:text-secondary transition-colors duration-300">Preguntas Frecuentes</Link>
                     </nav>
                 </div>
