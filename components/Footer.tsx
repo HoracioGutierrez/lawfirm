@@ -18,15 +18,15 @@ function Footer() {
                 </h2>
             </div>
             <Separator className="block w-full md:w-2/3 mx-auto my-12 max-w-[1600px]" />
-            <div className="text-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-[1600px] mx-auto">
+            <div className="text-white flex flex-col md:flex-row items-start justify-between gap-12 max-w-[1600px] mx-auto">
                 <div className="w-full md:w-1/5 flex flex-col gap-5">
                     <h3 className="text-2xl">Sobre Nosotros</h3>
                     <p className={cn(dmSans.className)}>Conocemos más sobre nuestro estudio a traves de nuestras redes en</p>
                     <nav className="flex gap-4">
-                        <FacebookIcon className="hover:text-secondary transition-colors duration-300"/>
-                        <LinkedinIcon className="hover:text-secondary transition-colors duration-300"/>
-                        <TwitterIcon className="hover:text-secondary transition-colors duration-300"/>
-                        <InstagramIcon className="hover:text-secondary transition-colors duration-300"/>
+                        <FacebookIcon className="hover:text-secondary transition-colors duration-300" />
+                        <LinkedinIcon className="hover:text-secondary transition-colors duration-300" />
+                        <TwitterIcon className="hover:text-secondary transition-colors duration-300" />
+                        <InstagramIcon className="hover:text-secondary transition-colors duration-300" />
                     </nav>
                 </div>
                 <div className="hidden md:w-1/5 md:flex flex-col gap-5">
@@ -49,9 +49,15 @@ function Footer() {
                 <div className="w-full md:w-1/5 flex flex-col gap-5">
                     <h3 className="text-2xl">Contactenos</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <p className="flex gap-2 items-center"><Phone />+54 11 3633 2324</p>
-                        <p className="flex gap-2 items-center"><MailIcon /> angelaeestevez@yahoo.com.ar</p>
-                        <p className="flex gap-2 items-center"><PinIcon /> 12 de Octubre 767 - Quilmes, Buenos Aires, Argentina.</p>
+                        <p className="flex gap-2 items-center flex-wrap"><Phone />
+                            <span className="break-all">+54 11 3633 2324</span>
+                        </p>
+                        <p className="flex gap-2 items-center flex-wrap"><MailIcon />
+                            <span className="break-all">angelaeestevez@yahoo.com.ar</span>
+                        </p>
+                        <p className="flex gap-2 items-center flex-wrap"><PinIcon />
+                            <span className="break-all">12 de Octubre 767 - Quilmes, Buenos Aires, Argentina.</span>
+                        </p>
                     </nav>
                 </div>
             </div>
