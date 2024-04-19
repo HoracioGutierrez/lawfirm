@@ -32,9 +32,9 @@ function Footer() {
                 <div className="hidden md:w-1/5 md:flex flex-col gap-5">
                     <h3 className="text-2xl">Servicios</h3>
                     <nav className={cn(dmSans.className, "flex gap-4 flex-col")}>
-                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Penal</Link>
-                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Comercial</Link>
-                        <Link href="#" className="hover:text-secondary transition-colors duration-300">Civil</Link>
+                        <Link href="/services/penal" className="hover:text-secondary transition-colors duration-300">Penal</Link>
+                        <Link href="/services/comercial" className="hover:text-secondary transition-colors duration-300">Comercial</Link>
+                        <Link href="/services/civil" className="hover:text-secondary transition-colors duration-300">Civil</Link>
                     </nav>
                 </div>
                 <Separator className="block mx-auto md:hidden" />
