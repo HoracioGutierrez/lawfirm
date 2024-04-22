@@ -4,7 +4,7 @@ import { Menu } from "lucide-react"
 import { DM_Sans } from "next/font/google"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer"
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerTitle, DrawerTrigger } from "./ui/drawer"
 import { Button } from "./ui/button"
 import { useMemo, useState } from "react"
 import Title from "./Titles"
@@ -52,7 +52,7 @@ function Header() {
     }
 
     return (
-        <header className={cn("p-6 md:p-10 lg:p-14 xl:p-20", path != "/" && "bg-primary text-white")}>
+        <header className={cn("p-6 md:p-10 lg:p-14 xl:p-20 bg-[#E8E9E1]", path != "/" && "bg-primary text-white")}>
             <div className="max-w-[1600px] mx-auto flex items-center justify-between">
                 <Link href="/">
                     <h1 className="flex items-center gap-4 text-sm md:text-base lg:text-lg xl:text-2xl">
@@ -69,10 +69,11 @@ function Header() {
                     <Link href="/contact" className="text-xs transition-colors duration-300 md:text-sm lg:text-base xl:text-lg hover:text-secondary">Contacto</Link>
                 </nav>
 
-                <Drawer shouldScaleBackground open={open}>
+                <Drawer shouldScaleBackground open={open} onOpenChange={setOpen}>
                     <DrawerTrigger className="sm:hidden" asChild onClick={handleOpen}>
                         <Menu />
                     </DrawerTrigger>
+                    <DrawerOverlay onClick={handleClose} className="bg-[rgba(0,0,0,0.4)]"/>
                     <DrawerContent>
                         <DrawerHeader>
                             <DrawerTitle>Menu</DrawerTitle>

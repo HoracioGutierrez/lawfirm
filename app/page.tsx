@@ -9,19 +9,19 @@ const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
 export default function Home() {
   return (
-    <main className="px-6 md:px-10 lg:px-14 xl:px-20">
+    <main className="px-6 md:px-10 lg:px-14 xl:px-20 bg-[#E8E9E1]">
 
       <section id="banner" className="max-w-[1600px] mx-auto relative flex justify-center items-center py-10 md:py-0 md:justify-end">
 
-        <div className="left-0 flex flex-col items-center w-3/4 px-2 md:absolute gap-28 xl:items-start md:px-0 md:items-start">
+        <div className="left-0 z-10 flex flex-col items-center w-3/4 px-2 md:absolute gap-28 xl:items-start md:px-0 md:items-start">
           <Title className="text-center md:text-left">
             Defendiendo verdad con justicia en <span className="text-secondary">Estevez & Landriel</span>
           </Title>
           <Button href="/contact"> Contactar </Button>
         </div>
 
-        <div className="absolute w-full h-full object-cover md:hidden z-[-1] top-0 left-0 bg-[rgba(255,255,255,0.5)]"></div>
-        <Image src="/banner.png" width={1143} height={736} alt="banner" className="absolute object-cover h-full -z-10 md:relative md:w-3/4 md:right-0" />
+        <div className="absolute w-full h-full object-cover md:hidden z-[1] top-0 left-0 bg-[rgba(255,255,255,0.5)]"></div>
+        <Image src="/banner.png" width={1143} height={736} alt="banner" className="absolute object-cover h-full z-[0] md:relative md:w-3/4 md:right-0" />
 
       </section>
 

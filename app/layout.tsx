@@ -19,10 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn(dmSerifDisplay.className,"bg-[#E8E9E1]")}>
-        <Header/>
-        {children}
-        <Footer/>
+      <body className={cn(dmSerifDisplay.className, "bg-[#E8E9E1]")}>
+        <div vaul-drawer-wrapper="">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
