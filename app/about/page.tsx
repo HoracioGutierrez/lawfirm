@@ -52,8 +52,8 @@ function AboutPage() {
             <section className="flex flex-col gap-20">
                 <Title className="text-center">Abogados y consejeros profesionales al servicio</Title>
                 <div className="flex flex-col gap-14 sm:flex-row sm:grid sm:grid-cols-3 sm:gap-7 xl:gap-14">
-                    {lawyers.map((lawyer) => (
-                        <article className="flex flex-col items-center gap-12">
+                    {lawyers.map((lawyer,i) => (
+                        <article className="flex flex-col items-center gap-12" key={i}>
                             <div className="overflow-hidden group">
                                 <Image src={lawyer.imageUrl} alt={lawyer.name} width={348} height={457} className="transition-transform duration-300 group-hover:scale-125 grayscale group-hover:grayscale-0" />
                             </div>
