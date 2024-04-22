@@ -1,3 +1,5 @@
+import Page from "@/components/Page"
+import Title from "@/components/Titles"
 import { cn } from "@/lib/utils"
 import { DM_Sans } from "next/font/google"
 import Image from "next/image"
@@ -42,25 +44,21 @@ interface ServiceTypePageProps {
 
 function ServiceTypePage({ params }: ServiceTypePageProps) {
     return (
-        <main className="px-6 md:px-10 lg:px-14 xl:px-20">
-            <div className="max-w-[1600px] mx-auto py-10 xl:py-20">
-                <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:gap-10 lg:place-items-end">
-                    <Image src="/service-1.png" alt="banner" width={646} height={804} className="aspect-video object-cover object-bottom lg:aspect-auto w-full h-full" />
-                    <div className="flex flex-col gap-10 self-stretch">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl capitalize">
-                            {params.type}
-                        </h2>
-                        <div className="flex flex-col gap-4">
-                            {servicesTexts[params.type].map((service, i) => {
-                                return (
-                                    <p className={cn(dmSans.className, "text-2xl")} key={i}>{service}</p>
-                                )
-                            })}
-                        </div>
+        <Page>
+            <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:gap-10 lg:place-items-end">
+                <Image src="/service-1.png" alt="banner" width={646} height={804} className="object-cover object-bottom w-full h-full aspect-video lg:aspect-auto" />
+                <div className="flex flex-col self-stretch gap-10">
+                    <Title className="capitalize">{params.type}</Title>
+                    <div className="flex flex-col gap-4">
+                        {servicesTexts[params.type].map((service, i) => {
+                            return (
+                                <p className={cn(dmSans.className, "text-2xl")} key={i}>{service}</p>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
-        </main>
+        </Page>
     )
 }
 
