@@ -4,12 +4,13 @@ import Header from "../components/Header";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: " E&L | Estudio Jurídico",
-  description: "Estudio Jurídico Estevez & Landriel",
+  title: " AE | Estudio Jurídico Estevez",
+  description: "Estudio Jurídico Estevez",
 };
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Toaster/>
         </div>
       </body>
     </html>

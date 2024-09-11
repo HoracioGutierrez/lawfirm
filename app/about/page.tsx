@@ -14,12 +14,12 @@ const lawyers = [
         title: "Abogada Penalista",
         href: "/about/angela"
     },
-    {
+    /* {
         imageUrl: "/lawer-2.png",
         name: "Debora Landriel",
         title: "Abogada Civil",
         href: "/about/debora"
-    },
+    }, */
     {
         imageUrl: "/lawer-3.png",
         name: "Daniel Iacarino",
@@ -39,19 +39,19 @@ function AboutPage() {
                         <span className="text-xl sm:text-2xl text-muted-foreground">Bienvenidos a</span>
                         <br className="" />
                         <Title className="text-secondary" as="span">
-                            Estevez & <br className="hidden lg:block" /> Landriel
+                            Estevez  <br className="hidden lg:block" /> Estudio Jurídico
                         </Title>
                     </h2>
                 </div>
                 <div className={cn(dmSans.className, "flex flex-col gap-4")}>
-                    <p>En <span className="font-bold">Estevez & Landriel</span>, nos apasiona brindar soluciones legales efectivas y personalizadas a nuestros clientes. Desde el momento en que se pone en contacto con nosotros, nuestro objetivo principal es aliviar su carga y guiarlo con confianza a través de cualquier desafío legal que enfrente.</p>
+                    <p>En <span className="font-bold">Estevez Estudio Jurídico</span>, nos apasiona brindar soluciones legales efectivas y personalizadas a nuestros clientes. Desde el momento en que se pone en contacto con nosotros, nuestro objetivo principal es aliviar su carga y guiarlo con confianza a través de cualquier desafío legal que enfrente.</p>
                     <p>Entendemos que los asuntos legales pueden ser abrumadores, ya sea que se trate de un conflicto familiar, una disputa comercial, o la necesidad de asesoramiento preventivo. Es por eso que nuestro equipo de abogados altamente capacitados se dedica a escuchar atentamente sus inquietudes, comprender a fondo su situación específica y desarrollar estrategias legales sólidas que se adapten a sus necesidades únicas. Nos esforzamos por mantener una comunicación clara y abierta con usted a lo largo de todo el proceso legal, para que siempre esté informado y empoderado para tomar decisiones importantes.</p>
                 </div>
             </section>
 
             <section className="flex flex-col gap-20">
                 <Title className="text-center">Abogados y consejeros profesionales al servicio</Title>
-                <div className="flex flex-col gap-14 sm:flex-row sm:grid sm:grid-cols-3 sm:gap-7 xl:gap-14">
+                <div className="flex flex-col gap-14 sm:flex-row sm:grid sm:grid-flow-col sm:gap-7 xl:gap-14">
                     {lawyers.map((lawyer,i) => (
                         <article className="flex flex-col items-center gap-12" key={i}>
                             <div className="overflow-hidden group">

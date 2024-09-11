@@ -7,6 +7,8 @@ import { Clock, MailIcon, Phone, PinIcon } from "lucide-react"
 import Button from "@/components/Button"
 import Title from "@/components/Titles"
 import Page from "@/components/Page"
+import { sendContactEmail } from "@/actions/sendContactEmail"
+import { useToast } from "@/components/ui/use-toast"
 
 
 function ContactPage() {
@@ -19,12 +21,33 @@ function ContactPage() {
         phone: yup.string().max(100, "El teléfono es demasiado extenso").min(3, "El teléfono es demasiado corto").required("El teléfono es requerido"),
     })
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(contactSchema)
     })
 
+    const { toast } = useToast()
+
     const onSubmit = (data: any) => {
         console.log(data)
+        sendContactEmail(data)
+            .then((result) => {
+
+                toast({
+                    title: "Enviado",
+                    description: "Gracias por contactarnos",
+                    variant: "default",
+                })
+                
+                reset()
+            })
+            .catch((error) => {
+
+                toast({
+                    title: "Error",
+                    description: error.message,
+                    variant: "destructive",
+                })
+            })
     }
 
     return (
