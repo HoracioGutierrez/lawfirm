@@ -34,7 +34,7 @@ function AboutPage() {
 
             <section className="flex flex-col gap-10 lg:gap-20">
                 <div className="flex flex-col sm:flex-row sm:items-end sm:gap-10 md:gap-20 lg:gap-28 xl:gap-36">
-                    <Image src="/person-1.png" alt="person-1" width={405} height={418} className="w-full sm:w-1/2 max-w-[405px]" />
+                    <Image src="/person-1.png" alt="person-1" width={405} height={418} className="w-full sm:w-1/2 max-w-[405px] max-h-[350px] object-cover" />
                     <h2>
                         <span className="text-xl sm:text-2xl text-muted-foreground">Bienvenidos a</span>
                         <br className="" />
@@ -52,10 +52,10 @@ function AboutPage() {
             <section className="flex flex-col gap-20">
                 <Title className="text-center">Abogados y consejeros profesionales al servicio</Title>
                 <div className="flex flex-col gap-14 sm:flex-row sm:grid sm:grid-flow-col sm:gap-7 xl:gap-14">
-                    {lawyers.map((lawyer,i) => (
+                    {lawyers.map((lawyer, i) => (
                         <article className="flex flex-col items-center gap-12" key={i}>
                             <div className="overflow-hidden group">
-                                <Image src={lawyer.imageUrl} alt={lawyer.name} width={348} height={457} className="transition-transform duration-300 group-hover:scale-125 grayscale group-hover:grayscale-0" />
+                                <Image src={lawyer.imageUrl} alt={lawyer.name} width={348} height={457} className="transition-transform duration-300 group-hover:scale-125 grayscale group-hover:grayscale-0 max-h-[450px] object-cover object-top" quality={100}/>
                             </div>
                             <div className="flex flex-col items-center gap-5">
                                 <h3 className="text-2xl">{lawyer.name}</h3>

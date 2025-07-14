@@ -28,7 +28,12 @@ function ContactPage() {
     const { toast } = useToast()
 
     const onSubmit = (data: any) => {
-        console.log(data)
+        toast({
+            title: "Enviando",
+            description: "Por favor, espere un momento",
+            variant: "default",
+        })
+
         sendContactEmail(data)
             .then((result) => {
 
@@ -37,7 +42,7 @@ function ContactPage() {
                     description: "Gracias por contactarnos",
                     variant: "default",
                 })
-                
+
                 reset()
             })
             .catch((error) => {

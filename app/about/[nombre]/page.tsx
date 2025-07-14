@@ -59,7 +59,7 @@ const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 function AboutLawyerPage({ params }: AboutLawyerPageProps) {
     return (
         <Page divClassName="lg:grid lg:grid-cols-2">
-            <Image src={`/${lawyers[params.nombre].image}`} alt="banner" width={788} height={711} className="object-cover aspect-square" />
+            <Image src={`/${lawyers[params.nombre].image}`} alt="banner" width={788} height={711} className="object-cover aspect-square object-top" />
             <div className="flex flex-col justify-center gap-14">
                 <div className="flex flex-col gap-5">
                     <Title type="medium">{lawyers[params.nombre].name}</Title>

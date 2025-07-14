@@ -13,13 +13,27 @@ export async function POST(req: Request) {
             react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
             text: 'Formulario de Contacto - Estevez Estudio Jurídico',
         })
+        await resend.emails.send({
+            from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
+            to: ['angelaeestevez@gmail.com'],
+            subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
+            react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
+            text: 'Formulario de Contacto - Estevez Estudio Jurídico',
+        })
+        await resend.emails.send({
+            from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
+            to: ['angelaeestevez@yahoo.com.ar'],
+            subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
+            react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
+            text: 'Formulario de Contacto - Estevez Estudio Jurídico',
+        })
 
         return Response.json({ error: false, errorMessage: "", data });
     } catch (error) {
-        if(error instanceof Error) {
-            return Response.json({ error : true, errorMessage: error.message , data: {} });
+        if (error instanceof Error) {
+            return Response.json({ error: true, errorMessage: error.message, data: {} });
         } else {
-            return Response.json({ error : true, errorMessage: "Error inesperado", data: {} });
+            return Response.json({ error: true, errorMessage: "Error inesperado", data: {} });
         }
     }
 }
