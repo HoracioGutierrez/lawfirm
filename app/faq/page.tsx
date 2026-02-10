@@ -9,7 +9,7 @@ function FaqPage() {
         <main className="px-6 md:px-10 lg:px-14 xl:px-20">
             <div className="max-w-[1600px] mx-auto py-10 flex flex-col gap-10 xl:gap-44 xl:py-20">
                 <div className="relative mb-10">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl after-line w-fit pr-4 bg-[#e8e9e1]">Preguntas Frecuentes</h2>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl after-line w-fit pr-4 bg-[#e8e9e1]">Preguntas Frecuentes</h1>
                     <div className="h-[2px] bg-primary w-full hidden md:block absolute top-[50%] translate-y-[-50%] -z-10"></div>
                 </div>
                 <Accordion type="single" collapsible className="grid grid-cols-1 gap-x-10 gap-y-5">

@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon, LinkedinIcon, LocateIcon, MailIcon, Phone, PinIcon, TwitterIcon } from "lucide-react"
+import { FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon, Phone, PinIcon, TwitterIcon } from "lucide-react"
 import { Separator } from "./ui/separator"
 import Link from "next/link"
 import { cn } from "@/lib/utils"

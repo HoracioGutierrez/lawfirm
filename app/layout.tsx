@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 const dmSerifDisplay = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: " AE | Estudio Jurídico Estevez",
+  title: "AE | Estudio Jurídico Estevez",
   description: "Estudio Jurídico Estevez",
   openGraph: {
     type: "website",

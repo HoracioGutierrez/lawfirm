@@ -71,7 +71,7 @@ function Header() {
                 </nav>
 
                 <Drawer shouldScaleBackground open={open} onOpenChange={setOpen}>
-                    <DrawerTrigger className="sm:hidden" asChild onClick={handleOpen}>
+                    <DrawerTrigger className="sm:hidden" asChild onClick={handleOpen} aria-label="Abrir menú de navegación">
                         <Menu />
                     </DrawerTrigger>
                     <DrawerOverlay onClick={handleClose} className="bg-[rgba(0,0,0,0.4)]" />

@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
         <div className="top-0 left-0 z-[1] absolute md:hidden bg-[rgba(255,255,255,0.5)] w-full h-full object-cover"></div>
-        <Image src="/banner.png" width={1143} height={736} alt="banner" className="md:relative md:right-0 z-[0] absolute md:w-3/4 h-full object-cover" />
+        <Image src="/banner.png" width={1143} height={736} alt="banner" className="md:relative md:right-0 z-[0] absolute md:w-3/4 h-full object-cover" priority />
 
       </section>
 
