@@ -5,28 +5,23 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
     const { email, name, message, lastname, phone } = await req.json();
+
+    const contactEmails = process.env.CONTACT_EMAILS?.split(',').filter(Boolean) ?? [];
+
+    const emailPayload = {
+        from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
+        subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
+        react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
+        text: 'Formulario de Contacto - Estevez Estudio Jurídico',
+    };
+
     try {
-        const data = await resend.emails.send({
-            from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
-            to: [email],
-            subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
-            react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
-            text: 'Formulario de Contacto - Estevez Estudio Jurídico',
-        })
-        await resend.emails.send({
-            from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
-            to: ['angelaeestevez@gmail.com'],
-            subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
-            react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
-            text: 'Formulario de Contacto - Estevez Estudio Jurídico',
-        })
-        await resend.emails.send({
-            from: 'Estevez Estudio Jurídico <estevez-estudio-juridico-noreply@resend.dev>',
-            to: ['angelaeestevez@yahoo.com.ar'],
-            subject: 'Formulario de Contacto - Estevez Estudio Jurídico',
-            react: EmailTemplate({ firstName: name, lastName: lastname, phone, message }),
-            text: 'Formulario de Contacto - Estevez Estudio Jurídico',
-        })
+        const [data] = await Promise.all([
+            resend.emails.send({ ...emailPayload, to: [email] }),
+            ...contactEmails.map((to) =>
+                resend.emails.send({ ...emailPayload, to: [to.trim()] })
+            ),
+        ]);
 
         return Response.json({ error: false, errorMessage: "", data });
     } catch (error) {

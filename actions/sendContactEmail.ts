@@ -1,25 +1,25 @@
-export const sendContactEmail = async (data: any) => {
-    try {
-        const response = await fetch("/api/send", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
+interface ContactFormData {
+    name: string;
+    lastname: string;
+    email: string;
+    message: string;
+    phone: string;
+}
 
-        const result = await response.json()
-        
-        if(result.error) {
-            throw new Error(result.errorMessage)
-        } else {
-            return { error : false , data : result.data , errorMessage : "" }
-        }
-    } catch (error) {
-        if(error instanceof Error) {
-            return { error : true , data : {} , errorMessage : error.message }
-        }
+export const sendContactEmail = async (data: ContactFormData) => {
+    const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
 
-        return { error : true , data : {} , errorMessage : "Error inesperado" }
+    const result = await response.json()
+
+    if (result.error) {
+        throw new Error(result.errorMessage || "Error al enviar el mensaje")
     }
+
+    return { error: false, data: result.data, errorMessage: "" }
 }
