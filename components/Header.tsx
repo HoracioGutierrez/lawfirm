@@ -27,7 +27,7 @@ function Header() {
         if (path === "/services/laboral") return "Laboral"
         if (path === "/services/comercial") return "Comercial"
         if (path === "/about/angela") return "Angela Estevez"
-        if (path === "/about/debora") return "Debora Landriel"
+
         if (path === "/about/daniel") return "Daniel Iacarino"
     }, [path])
 
@@ -40,7 +40,7 @@ function Header() {
         if (path === "/services/laboral") return "Explore la amplia gama de servicios legales que ofrecemos para satisfacer sus necesidades individuales y comerciales."
         if (path === "/services/comercial") return "Explore la amplia gama de servicios legales que ofrecemos para satisfacer sus necesidades individuales y comerciales."
         if (path === "/about/angela") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
-        if (path === "/about/debora") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
+
         if (path === "/about/daniel") return "Conozca a nuestro equipo de abogados dedicados y experimentados, y descubra cómo podemos ayudarlo a enfrentar sus desafíos legales."
     }, [path])
 

@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { cn } from "@/lib/utils"
 import { DM_Sans } from "next/font/google"
 import Image from "next/image"
-import Link from "next/link"
+
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
@@ -61,11 +61,11 @@ function ServicesPage() {
                 </Accordion>
             </section>
             <section className="flex flex-col gap-4 py-20 xl:py-32">
-                <p className={cn(dmSans.className, "text-base lg:text-lg")}>Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.</p>
-                <p className={cn(dmSans.className, "text-base lg:text-lg")}>Cum mattis mollis odio gravida adipiscing. Facilisis scelerisque non lacinia tincidunt faucibus tortor vel. Erat risus etiam quam pretium ornare. Semper orci arcu pulvinar adipiscing pretium. Erat facilisis dis arcu senectus sit mi fermentum eu aliquam. Felis neque posuere pharetra porttitor lacinia proin pretium. Et et pharetra tincidunt vel egestas risus sed mollis adipiscing. Lobortis risus mauris vitae pellentesque lobortis sapien. Mi convallis leo nisl pharetra quam arcu blandit. Metus nisl volutpat ut sed sit sit est. </p>
+                <p className={cn(dmSans.className, "text-base lg:text-lg")}>En Estevez Estudio Jurídico ofrecemos una primera consulta para evaluar su situación legal y determinar la mejor estrategia para su caso. Nuestro equipo de profesionales lo acompañará durante todo el proceso, brindándole asesoramiento claro y soluciones adaptadas a sus necesidades particulares.</p>
+                <p className={cn(dmSans.className, "text-base lg:text-lg")}>Contamos con amplia experiencia en las distintas ramas del derecho, lo que nos permite ofrecer un servicio integral y de calidad. Nos comprometemos a defender sus derechos con dedicación y transparencia, manteniéndolo informado en cada etapa del procedimiento legal.</p>
                 <p className="my-16 text-7xl">$10.000,00 / consulta</p>
-                <Button href="#" className="self-start">
-                    <Link href="/contact">Hacer Reserva</Link>
+                <Button href="/contact" className="self-start">
+                    Hacer Reserva
                 </Button>
             </section>
             <section className="py-10 xl:py-20">

@@ -14,12 +14,6 @@ const lawyers = [
         title: "Abogada Penalista",
         href: "/about/angela"
     },
-    /* {
-        imageUrl: "/lawer-2.png",
-        name: "Debora Landriel",
-        title: "Abogada Civil",
-        href: "/about/debora"
-    }, */
     {
         imageUrl: "/lawer-3.png",
         name: "Daniel Iacarino",

@@ -3,6 +3,7 @@ import Title from "@/components/Titles"
 import { cn } from "@/lib/utils"
 import { DM_Sans } from "next/font/google"
 import Image from "next/image"
+import { notFound } from "next/navigation"
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] })
 
@@ -26,7 +27,7 @@ const servicesTexts: ServicesType = {
     "laboral": [
         "El derecho laboral regula la relación entre empleadores y empleados, estableciendo normas y principios que protegen los derechos fundamentales de los trabajadores. En Estevez Estudio Jurídico, nuestro equipo de abogados laborales experimentados se dedica a defender los derechos de los trabajadores en todos los aspectos de su relación laboral.",
         "Ya sea que haya sido despedido injustificadamente, discrimindado en el lugar de trabajo, no se le haya pagado el salario correcto o haya sufrido una lesión laboral, nuestros abogados laborales están aquí para proteger sus derechos. Analizaremos cuidadosamente su situación, le informaremos sobre sus opciones legales y tomaremos las medidas necesarias para hacer cumplir sus derechos como trabajador.",
-        "En Estevez Estudio Jurídico, creemos que todos los trabajadores merecen ser tratados con respeto y dignidad en el lugar de trabajo. Si sus derechos han sido vulnerados, lucharemos incansablemente para obtener una compensación justa por las violaciones que ha sufrido. Esto puede incluir"
+        "En Estevez Estudio Jurídico, creemos que todos los trabajadores merecen ser tratados con respeto y dignidad en el lugar de trabajo. Si sus derechos han sido vulnerados, lucharemos incansablemente para obtener una compensación justa por las violaciones que ha sufrido. Esto puede incluir indemnizaciones por despido injustificado, reclamos salariales, compensaciones por accidentes de trabajo y cualquier otra reparación que corresponda conforme a la legislación laboral vigente."
     ],
     "comercial": [
         "En el dinámico mundo del comercio, donde las decisiones estratégicas y la protección de los intereses comerciales son cruciales, en Estevez Estudio Jurídico nos posicionamos como su aliado para el éxito empresarial. Nuestro equipo de abogados comerciales experimentados brinda asesoría legal integral y representación efectiva en todas las áreas del derecho comercial, guiando a su empresa hacia un futuro próspero y seguro.",
@@ -43,6 +44,12 @@ interface ServiceTypePageProps {
 }
 
 function ServiceTypePage({ params }: ServiceTypePageProps) {
+    const texts = servicesTexts[params.type]
+
+    if (!texts) {
+        notFound()
+    }
+
     return (
         <Page>
             <div className="flex flex-col lg:place-items-end gap-5 lg:gap-10 lg:grid lg:grid-cols-2">
@@ -50,7 +57,7 @@ function ServiceTypePage({ params }: ServiceTypePageProps) {
                 <div className="flex flex-col gap-10 self-stretch">
                     <Title className="capitalize">{params.type}</Title>
                     <div className="flex flex-col gap-4">
-                        {servicesTexts[params.type].map((service, i) => {
+                        {texts.map((service, i) => {
                             return (
                                 <p className={cn(dmSans.className, "text-2xl")} key={i}>{service}</p>
                             )
